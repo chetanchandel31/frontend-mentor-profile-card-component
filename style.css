@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 html, body{
@@ -14,18 +15,61 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* background: url(./images/bg-pattern-top.svg) -350px -500px / auto no-repeat, hsl(185, 75%, 39%) url(./images/bg-pattern-bottom.svg) 700px 350px / auto no-repeat; */
+    background-color: hsl(185, 75%, 39%);
+    overflow: hidden;
 }
 
+h1{
+    font-weight: 700;
+    font-size: 18px;
+    color: hsl(229, 23%, 23%);
+} 
+
 .card{
-    border: solid 2px black;
     text-align: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    z-index: 2;
+}
+/* stuff above stats */
+.patternPortion{
+    position: relative;
+    background: url(./images/bg-pattern-card.svg) center / cover;
+    height: 23vh;
+}
+
+.whitePortion{
+    height: 24vh;
+    padding-top: 12vh;
+}
+
+.whitePortion div {
+    margin-top: 0.7rem;
+}
+
+.whitePortion h1 small, .whitePortion div{
+    font-weight: 400;
+    color: hsl(227, 10%, 46%);
 }
 
 .profilePic{
-    border-radius: 50%;
-    border: solid white 2px;
-}
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* transform: translateX(-50%); */
+    top: 100%;
+    transform: translateY(-50%);
 
+    border-radius: 50%;
+    border: solid white 5px;
+}
+/* stats */
 .stats{
     display: flex;
     flex-direction: row;
@@ -33,6 +77,29 @@ body{
 }
 
 .stats span{
-    border: solid 2px red;
+    border-top: solid 2px hsla(0, 0%, 59%, 0.3);
     flex: 1 0 0;
+    padding: 2rem 0 1.5rem 0;
+}
+
+.stats span div{
+    font-weight: 400;
+    font-size: smaller;
+    color: hsl(0, 0%, 59%);
+    margin-top: 0.5rem;
+}
+/* background */
+.bgCircleOne, .bgCircleTwo {
+    position: absolute;
+    z-index: 1;
+}
+
+.bgCircleOne{
+    bottom: 50%;
+    right: 50%;
+}
+
+.bgCircleTwo{
+    top: 50%;
+    left: 50%;
 }
