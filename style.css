@@ -9,16 +9,18 @@
 
 html, body{
     height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     /* background: url(./images/bg-pattern-top.svg) -350px -500px / auto no-repeat, hsl(185, 75%, 39%) url(./images/bg-pattern-bottom.svg) 700px 350px / auto no-repeat; */
     background-color: hsl(185, 75%, 39%);
-    overflow: hidden;
 }
 
 h1{
@@ -36,7 +38,7 @@ h1{
     background-color: white;
     z-index: 2;
 }
-/* stuff above stats */
+/* card header */
 .patternPortion{
     position: relative;
     background: url(./images/bg-pattern-card.svg) center / cover;
@@ -69,7 +71,7 @@ h1{
     border-radius: 50%;
     border: solid white 5px;
 }
-/* stats */
+/* card footer */
 .stats{
     display: flex;
     flex-direction: row;
