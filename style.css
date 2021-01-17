@@ -43,11 +43,13 @@ h1{
     position: relative;
     background: url(./images/bg-pattern-card.svg) center / cover;
     height: 23vh;
+    min-height: 117.19px;
 }
 
 .whitePortion{
     height: 24vh;
-    padding-top: 12vh;
+    min-height: 123.59px;
+    padding-top: 78.84px;
 }
 
 .whitePortion div {
